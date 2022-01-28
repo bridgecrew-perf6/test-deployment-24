@@ -17,7 +17,7 @@ jobs:
         run: npm install
 
       - name: Run dev
-        run: npm dev
+        run: npm run dev
 
   continuous-deployment:
     runs-on: ubuntu-latest
