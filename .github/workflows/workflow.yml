@@ -2,9 +2,6 @@ name: CI/CD Pipeline
 on:
   push:
     branches: [main]
-env:
-  AWS_ACCESS_KEY_ID: AKIAZMZLWOFGOOSKZCFM
-  AWS_SECRET_ACCESS_KEY: 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
 
 jobs:
   continuous-integration:
@@ -30,7 +27,8 @@ jobs:
       # Step 1
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
-        with: aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+        with: 
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1d
 
