@@ -35,8 +35,6 @@ jobs:
       # Step 2
       - name: Create CodeDeploy Deployment
         id: deploy
-        with:
-          port: 9000
         run: |
           aws deploy create-deployment \
             --application-name application-name \
